@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Put your new value here!</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Enter some input</mat-label>
+    <input
+      matInput
+      maxlength="10"
+      *rxLet="value$; let value"
+      [value]="value"
+      (input)="onInput($event)"
+    />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    *rxLet="isInputEmpty$; let isInputEmpty"
+    [disabled]="!isInputEmpty"
+    (click)="save()"
+  >
+    Save
+  </button>
+</mat-dialog-actions>

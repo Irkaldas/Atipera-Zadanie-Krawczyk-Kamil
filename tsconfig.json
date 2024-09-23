@@ -19,9 +19,14 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
+    "lib": ["ES2022", "dom"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@angular",
+      "node_modules/@rx-angular",
+      "node_modules/*",
+      "node_modules/@rx-angular/template/if",
+      "node_modules/@rx-angular/template/let"
     ]
   },
   "angularCompilerOptions": {
